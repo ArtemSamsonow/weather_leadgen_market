@@ -16,7 +16,7 @@ export default defineConfig({
             },
         },
         cssCodeSplit: true,
-        outDir: "build",
+        outDir: "dist",
         assetsDir: "js",
     },
     resolve: {
