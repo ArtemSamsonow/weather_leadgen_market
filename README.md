@@ -1,54 +1,82 @@
-# React + TypeScript + Vite
+# Weather Leadgen.Market
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современное веб-приложение для получения данных о погоде с удобным пользовательским интерфейсом, построенное на React с использованием TypeScript и Vite.
 
-Currently, two official plugins are available:
+## Технологии
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- TypeScript
+- Vite
+- Redux Toolkit
+- TailwindCSS
+- Framer Motion
+- React Hook Form
+- Axios
 
-## Expanding the ESLint configuration
+## Требования
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (версия 18.x или выше)
+- npm (версия 8.x или выше)
 
-```js
-export default tseslint.config({
-    extends: [
-        // Remove ...tseslint.configs.recommended and replace with this
-        ...tseslint.configs.recommendedTypeChecked,
-        // Alternatively, use this for stricter rules
-        ...tseslint.configs.strictTypeChecked,
-        // Optionally, add this for stylistic rules
-        ...tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-});
+## Установка и запуск
+
+Следуйте этим шагам для настройки проекта на вашем локальном компьютере:
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/ваш-репозиторий/weather_leadgen_market.git
+cd weather_leadgen_market
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Установка зависимостей
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config({
-    plugins: {
-        // Add the react-x and react-dom plugins
-        "react-x": reactX,
-        "react-dom": reactDom,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended typescript rules
-        ...reactX.configs["recommended-typescript"].rules,
-        ...reactDom.configs.recommended.rules,
-    },
-});
+```bash
+npm install
 ```
+
+### 3. Настройка переменных окружения
+
+Создайте файл `.env` в корневой директории проекта и добавьте необходимые переменные окружения:
+
+```bash
+API_KEY=ваш_ключ_api_погоды
+```
+
+### 4. Запуск в режиме разработки
+
+```bash
+npm run dev
+```
+
+Это запустит проект на локальном сервере (обычно http://localhost:5173) с горячей перезагрузкой.
+
+### 5. Сборка для продакшена
+
+```bash
+npm run build
+```
+
+Собранные файлы будут размещены в директории `dist`.
+
+### 6. Предпросмотр продакшен-сборки
+
+```bash
+npm run preview
+```
+
+### 7. Деплой на GitHub Pages
+
+```bash
+npm run deploy
+```
+
+## Доступные скрипты
+
+- `npm run dev` - запуск проекта в режиме разработки с автоматическим запуском линтеров
+- `npm run build` - сборка проекта для продакшена
+- `npm run preview` - локальный предпросмотр продакшен-сборки
+- `npm run deploy` - деплой на GitHub Pages
+- `npm run linters` - запуск всех линтеров
+- `npm run lint-prettier` - форматирование кода с помощью Prettier
+- `npm run lint-eslint` - проверка и исправление кода с помощью ESLint
