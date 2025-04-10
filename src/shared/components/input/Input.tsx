@@ -11,7 +11,7 @@ export interface InputProps<TFieldValues extends FieldValues = FieldValues> exte
  */
 export const Input = <TFieldValues extends FieldValues = FieldValues>({
     name,
-    className = "w-full text-white p-2 bg-[#2b323c] rounded",
+    className = "w-full text-white p-2 bg-[#2b323c] rounded outline-none focus:outline-none",
     ...props
 }: InputProps<TFieldValues>) => {
     const { control, getValues } = useFormContext<TFieldValues>();
